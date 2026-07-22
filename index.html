@@ -2,20 +2,13 @@
 <html lang="es">
 
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>cumpleaños feliz ale 🎉 </title>
-
-    <link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="./style.css">
 </head>
 
-
 <body>
-
 
 <!-- ========================= -->
 <!-- PANTALLA INICIAL -->
@@ -23,128 +16,82 @@
 
 <main class="landing">
 
-
     <img
         class="cloud cloud-left"
         src="assets/images/ui/Nube.png"
         alt="Nube">
-
 
     <img
         class="cloud cloud-right"
         src="assets/images/ui/Nube.png"
         alt="Nube">
 
-
     <section class="content">
-
 
         <img
             class="pompom"
             src="assets/images/personajes/pompom3.png"
             alt="Pompompurin">
 
-
-
         <h1>
             Feliz cumpleaños te desea pompompurin y Alpinito 🎉
         </h1>
-
-
 
         <h2>
             Una pequeña aventura para...
         </h2>
 
-
-
         <p class="nickname">
             ✨ Ale ✨
         </p>
 
-
-
         <p class="description">
-
             Hoy es un día muy especial.
-
             <br><br>
-
             Perdí un regalo muy importante...
-
             <br><br>
-
             ¿Me ayudas a encontrarlo?
-
         </p>
 
-
-
         <button id="start">
-
             Comenzar
-
         </button>
-
 
     </section>
 
-
 </main>
-
-
-
 
 
 <!-- ========================= -->
 <!-- DIALOGO -->
 <!-- ========================= -->
 
-
 <div id="dialogOverlay" class="hidden">
 
-
     <div class="dialogBox">
-
 
         <img
             src="assets/images/personajes/pompo1.png"
             class="dialogCharacter"
             alt="Pompompurin">
 
-
         <div class="dialogText">
-
 
             <h3>
                 Pompompurin
             </h3>
 
-
-
             <p id="dialogMessage"></p>
 
-
-
             <button id="nextDialog">
-
                 Continuar
-
             </button>
-
-
 
         </div>
 
-
     </div>
 
-
 </div>
-
-
-
-
 
 
 <!-- ========================= -->
@@ -184,71 +131,34 @@
 </section>
 
 
-
-
-
-
-
-
 <!-- ========================= -->
 <!-- MODAL -->
 <!-- ========================= -->
 
-
-<div
-    id="rewardModal"
-    class="hidden">
-
-
+<div id="rewardModal" class="hidden">
 
     <div class="rewardCard">
 
-
-        <div
-            id="rewardIcon"
-            class="rewardIcon">
-
+        <div id="rewardIcon" class="rewardIcon">
             ⭐
-
         </div>
-
-
-
 
         <h2 id="rewardTitle"></h2>
 
-
-
         <p id="rewardText"></p>
 
-
-
-
         <button id="closeReward">
-
             Continuar
-
         </button>
-
-
 
     </div>
 
-
-
 </div>
-
-
-
-
-
-
 
 
 <!-- ========================= -->
 <!-- ESCENA FINAL -->
 <!-- ========================= -->
-
 
 <section id="finalScene" class="hidden">
 
@@ -257,15 +167,11 @@
 
     <div class="finalContent">
 
-        <div class="finalStars">
-            
-        </div>
+        <div class="finalStars"></div>
 
         <img src="assets/images/personajes/pompopuFinal.png" class="finalPompom" alt="Pompompurin">
 
-        <div class="finalGift">
-            
-        </div>
+        <div class="finalGift"></div>
 
         <h1>¡Encontraste el regalo! 🎉</h1>
 
@@ -282,12 +188,6 @@
     </div>
 
 </section>
-
-
-
-
-
-
 
 
 <!-- ========================= -->
@@ -349,15 +249,9 @@
 
                 <h2>Con mucho cariño tu alpinito </h2>
 
-                 <p>
-                 
-
-                </p>
-
-                 <p>
+                <p>
                     P.D: espero te guste tanto este regalo, como tu me gustas a mi :3
                 </p>
-
 
                 <button id="closeLetter" class="letterButton">
                     Cerrar carta
@@ -371,15 +265,8 @@
 
 </section>
 
-
-
-
-
-
-<script src="app.js"></script>
-
+<script src="./app.js"></script>
 
 </body>
-
 
 </html>
