@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>cumpleaños feliz ale 🎉 </title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+
+
+<!-- ========================= -->
+<!-- PANTALLA INICIAL -->
+<!-- ========================= -->
+
+<main class="landing">
+
+
+    <img
+        class="cloud cloud-left"
+        src="assets/images/ui/Nube.png"
+        alt="Nube">
+
+
+    <img
+        class="cloud cloud-right"
+        src="assets/images/ui/Nube.png"
+        alt="Nube">
+
+
+    <section class="content">
+
+
+        <img
+            class="pompom"
+            src="assets/images/personajes/pompom3.png"
+            alt="Pompompurin">
+
+
+
+        <h1>
+            Feliz cumpleaños te desea pompompurin y Alpinito 🎉
+        </h1>
+
+
+
+        <h2>
+            Una pequeña aventura para...
+        </h2>
+
+
+
+        <p class="nickname">
+            ✨ Ale ✨
+        </p>
+
+
+
+        <p class="description">
+
+            Hoy es un día muy especial.
+
+            <br><br>
+
+            Perdí un regalo muy importante...
+
+            <br><br>
+
+            ¿Me ayudas a encontrarlo?
+
+        </p>
+
+
+
+        <button id="start">
+
+            Comenzar
+
+        </button>
+
+
+    </section>
+
+
+</main>
+
+
+
+
+
+<!-- ========================= -->
+<!-- DIALOGO -->
+<!-- ========================= -->
+
+
+<div id="dialogOverlay" class="hidden">
+
+
+    <div class="dialogBox">
+
+
+        <img
+            src="assets/images/personajes/pompo1.png"
+            class="dialogCharacter"
+            alt="Pompompurin">
+
+
+        <div class="dialogText">
+
+
+            <h3>
+                Pompompurin
+            </h3>
+
+
+
+            <p id="dialogMessage"></p>
+
+
+
+            <button id="nextDialog">
+
+                Continuar
+
+            </button>
+
+
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
+
+
+
+
+
+<!-- ========================= -->
+<!-- ESCENA JUEGO -->
+<!-- ========================= -->
+
+<section id="gameScene" class="scene hidden">
+
+    <!-- IMÁGENES DECORATIVAS DE FONDO -->
+    <img src="assets/images/ui/Nube.png" class="decor cloud top-left" alt="Nube">
+    <img src="assets/images/ui/Nube.png" class="decor cloud top-right" alt="Nube">
+    <img src="assets/images/ui/Nube.png" class="decor cloud bottom-left" alt="Nube">
+    <img src="assets/images/ui/Nube.png" class="decor cloud bottom-right" alt="Nube">
+    
+    <!-- PERSONAJES EXTRA -->
+    <img src="assets/images/personajes/pompom4.png" class="decor pompom-top-left" alt="Pompompurin Volando">
+    <img src="assets/images/personajes/pompom2.png" class="decor pompom-bottom-left" alt="Pompompurin Leyendo">
+    <img src="assets/images/personajes/piñadespeinada.jpg" class="decor pompom-bottom-right" alt="Pompompurin Asomado">
+
+    <!-- CONTENIDO ORIGINAL -->
+    <header class="gameHeader">
+        <div class="starsCounter" id="starsCounter">
+            ⭐ <span id="stars">0</span> / 19
+        </div>
+    </header>
+
+    <img src="assets/images/personajes/pompom5.png" class="gamePompom" alt="Pompompurin">
+
+    <h2 class="gameTitle">Encuentra el regalo 🎁</h2>
+
+    <p class="gameSubtitle">
+        Muffin escondió el regalo... ¿podrás encontrarlo?
+    </p>
+
+    <div class="grid" id="giftGrid"></div>
+
+</section>
+
+
+
+
+
+
+
+
+<!-- ========================= -->
+<!-- MODAL -->
+<!-- ========================= -->
+
+
+<div
+    id="rewardModal"
+    class="hidden">
+
+
+
+    <div class="rewardCard">
+
+
+        <div
+            id="rewardIcon"
+            class="rewardIcon">
+
+            ⭐
+
+        </div>
+
+
+
+
+        <h2 id="rewardTitle"></h2>
+
+
+
+        <p id="rewardText"></p>
+
+
+
+
+        <button id="closeReward">
+
+            Continuar
+
+        </button>
+
+
+
+    </div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- ========================= -->
+<!-- ESCENA FINAL -->
+<!-- ========================= -->
+
+
+<section id="finalScene" class="hidden">
+
+    <!-- IMAGEN DE ESTRELLAS DE FONDO -->
+    <img src="assets/images/ui/Estrellas.png" class="bg-stars" alt="Estrellas de fondo">
+
+    <div class="finalContent">
+
+        <div class="finalStars">
+            
+        </div>
+
+        <img src="assets/images/personajes/pompopuFinal.png" class="finalPompom" alt="Pompompurin">
+
+        <div class="finalGift">
+            
+        </div>
+
+        <h1>¡Encontraste el regalo! 🎉</h1>
+
+        <p>
+            El cielo de Ale
+            ahora brilla con sus 19 estrellas
+            esto simboliza tus 19 años  ✨
+        </p>
+
+        <button id="openLetter" class="letterButton">
+            Abrir sorpresa 💌
+        </button>
+
+    </div>
+
+</section>
+
+
+
+
+
+
+
+
+<!-- ========================= -->
+<!-- CARTA -->
+<!-- ========================= -->
+
+<section id="letterScene" class="hidden">
+
+    <!-- IMAGEN DE ESTRELLAS DE FONDO -->
+    <img src="assets/images/ui/Estrellas.png" class="bg-stars" alt="Estrellas de fondo">
+
+    <!-- DECORACIONES DE POMPOMPURIN ALREDEDOR -->
+    <img src="assets/images/personajes/flores.jpg" class="decor-pompom top-left-pompom" alt="Pompompurin Volando">
+    <img src="assets/images/personajes/pompom2.png" class="decor-pompom bottom-right-pompom" alt="Pompompurin Leyendo">
+
+    <div class="letterWrapper">
+
+        <div class="envelope" id="envelope">
+
+            <!-- Tapa superior del sobre -->
+            <div class="flap"></div>
+
+            <!-- Sello o adorno central opcional -->
+            <div class="envelope-seal">💛</div>
+
+            <!-- Hoja de papel (Carta) -->
+            <div class="paper">
+
+                <h1>Para mi cielo estrellado mas hermoso ✨</h1>
+
+                <p class="subtitle">Feliz cumpleaños número 19 💛</p>
+
+                <p>
+                    Preparé esta pequeña aventura
+                    porque quería regalarte algo
+                    diferente y especial.
+                </p>
+
+                <p>
+                    hize muy simbolico lo de las
+                    estrellas con tu edad,intentando
+                    darle un sentido al juego pero
+                    ambos sabemos que las estrellas para mi
+                    son tus lunares. esos que tanto me gustan
+                    y son unicos
+                </p>
+
+                <p>
+                    Gracias por ser una persona
+                    tan bonita y especial.
+                </p>
+
+                <p>
+                    Espero tengas un dia muy bonito 
+                    con todas las personas que quieres y aman
+                    verte feliz. y aunque no pueda estar ahi
+                    sabes que te quiero mucho y te pensare todo el dia 💛
+                </p>
+
+                <h2>Con mucho cariño tu alpinito </h2>
+
+                 <p>
+                 
+
+                </p>
+
+                 <p>
+                    P.D: espero te guste tanto este regalo, como tu me gustas a mi :3
+                </p>
+
+
+                <button id="closeLetter" class="letterButton">
+                    Cerrar carta
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+
+<script src="js/app.js"></script>
+
+
+</body>
+
+
+</html>
